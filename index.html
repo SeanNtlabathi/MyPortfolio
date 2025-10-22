@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sean Ntlabathi | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">SN.</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Hi! I'm Sean, a <span>Full-Stack Developer</span></h2>
+        <p>"First, solve the problem. Then, write the code." – John Johnson</p>
+        <a
+          href="https://drive.google.com/file/d/1CVzFvESqk5SZCWqrcGkVfVzyBqeX-cDy/view?usp=sharing"
+          class="btn"
+          >Curriculum Vitae</a
+        >
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-flex">
+          <img src="images/sean.jpg" alt="Sean Ntlabathi" />
+          <p>
+            I’m Sean Ntlabathi — a passionate Full-Stack Developer and Graphic
+            Designer based in Cape Town. I specialize in UI/UX, front-end
+            development, and backend technologies like Node.js and MySQL.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="timeline">
+          <li>
+            <h3>Life Choices Academy (2024–2025)</h3>
+            <p>Full-Stack Web Development, UI/UX, Data Analysis</p>
+          </li>
+          <li>
+            <h3>College of Cape Town (2022–2024)</h3>
+            <p>
+              Graphic Design, Drawing, Graphic Processes, Entrepreneurship &
+              Business Management, History of Art
+            </p>
+          </li>
+          <li>
+            <h3>Sea Point High School (2021)</h3>
+            <p>Matric | Business Studies, Visual Art, Design, Mathematics</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <img src="images/pricepulse.png" alt="Price Pulse" />
+            <h3>Price Pulse</h3>
+            <p>Mobile app that compares grocery prices in real time.</p>
+            <a
+              href="https://drive.google.com/file/d/1ze9FPha1kKZVqp1kgGvPIhoY8Qk3STNx/view?usp=sharing"
+              class="btn small"
+              >View Demo</a
+            >
+          </div>
+
+          <div class="project">
+            <img src="images/readyrecipes.png" alt="Ready Recipes" />
+            <h3>Ready Recipes e-commerce</h3>
+            <p>Meal kit ordering platform with curated recipes.</p>
+            <a
+              href="https://docs.google.com/presentation/d/1CUgH_gHvTqFXQm7dJYcxdj2Se4C_wrF0/edit?usp=sharing&ouid=113608061090433176136&rtpof=true&sd=true"
+              class="btn small"
+              >View Presentation</a
+            >
+          </div>
+
+          <div class="project">
+            <img src="images/iliso.png" alt="ILISO" />
+            <h3>ILISO Tracking System</h3>
+            <p>Real-time attendance tracking using NFC cards.</p>
+            <a href="https://atracker.lcstudio-incubate.co.za/" class="btn small"
+              >View Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div>
+            <h3>Technical</h3>
+            <p>HTML • CSS • JavaScript • Node • MySQL • Vue</p>
+          </div>
+          <div>
+            <h3>Design</h3>
+            <p>Illustrator • Photoshop • InDesign</p>
+          </div>
+          <div>
+            <h3>Certified</h3>
+            <p>Cloud • Cybersecurity • DevOps • Data Analysis • Software Dev</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Let’s Work Together</h2>
+          <p>
+            Have a project or opportunity in mind? Send me a message below — I’ll
+            reply within 24 hours.
+          </p>
+          <p>
+            📧
+            <a href="mailto:ntlabathisn1@gmail.com"
+              >ntlabathisn1@gmail.com</a
+            ><br />
+            📞 067 160 0389
+          </p>
+        </div>
+
+        <form
+          action="https://formspree.io/f/mldnybrk"
+          method="POST"
+          class="contact-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="_replyto"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <p class="copyright">© 2025 Sean Ntlabathi. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <!-- Scripts -->
+    <script>
+      // Section reveal animation
+      const sections = document.querySelectorAll("section");
+      const revealOnScroll = () => {
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            section.classList.add("visible");
+          }
+        });
+      };
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+
+      // Back to Top button behavior
+      const backToTop = document.getElementById("backToTop");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      };
+      backToTop.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
+  </body>
+</html>

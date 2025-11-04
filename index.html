@@ -28,29 +28,31 @@
       </nav>
     </header>
 
-    <!-- Home -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h2>Hi! I'm Sean, a <span>Full-Stack Developer</span></h2>
-        <p>"First, solve the problem. Then, write the code." – John Johnson</p>
-        <a
-          href="https://drive.google.com/file/d/1CVzFvESqk5SZCWqrcGkVfVzyBqeX-cDy/view?usp=sharing"
-          class="btn"
-          >Curriculum Vitae</a
-        >
-      </div>
-    </section>
+   <!-- Home -->
+<section id="home" class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2>Hi! I'm Sean, a <span>Front-End Developer</span></h2>
+    <p>"First, solve the problem. Then, write the code." – John Johnson</p>
+    <a
+      href="https://drive.google.com/file/d/1CVzFvESqk5SZCWqrcGkVfVzyBqeX-cDy/view?usp=sharing"
+      class="btn"
+      >Curriculum Vitae</a
+    >
+  </div>
+</section>
 
     <!-- About -->
     <section id="about" class="about section">
       <div class="container">
         <h2>About Me</h2>
+        <br>
         <div class="about-flex">
           <img src="images/sean.jpg" alt="Sean Ntlabathi" />
           <p>
-            I’m Sean Ntlabathi — a passionate Full-Stack Developer and Graphic
+            I’m Sean Ntlabathi — a passionate Front-End Developer and Graphic
             Designer based in Cape Town. I specialize in UI/UX, front-end
-            development, and backend technologies like Node.js and MySQL.
+            development as well as backend technologies like Node.js and MySQL.
           </p>
         </div>
       </div>
@@ -60,6 +62,7 @@
     <section id="education" class="section">
       <div class="container">
         <h2>Education</h2>
+        <br>
         <ul class="timeline">
           <li>
             <h3>Life Choices Academy (2024–2025)</h3>
@@ -84,6 +87,7 @@
     <section id="projects" class="projects section">
       <div class="container">
         <h2>Projects</h2>
+        <br>
         <div class="project-grid">
           <div class="project">
             <img src="images/pricepulse.png" alt="Price Pulse" />
@@ -91,6 +95,31 @@
             <p>Mobile app that compares grocery prices in real time.</p>
             <a
               href="https://drive.google.com/file/d/1ze9FPha1kKZVqp1kgGvPIhoY8Qk3STNx/view?usp=sharing"
+              class="btn small"
+              >View Demo</a
+            >
+          </div>
+
+          <div class="project">
+            <img src="images/iliso.png" alt="ILISO" />
+            <h3>ILISO Tracking System</h3>
+            <p>Real-time attendance tracking using NFC cards.</p>
+              <p>email: admin01@lifechoices.co.za</p>
+              <p>password: 1234</p>
+            <a href="https://atracker.lcstudio-incubate.co.za/" class="btn small"
+              >View Demo</a
+            >
+          </div>
+
+          <div class="project">
+            <img src="images/otdataanalysis.png" alt="Ready Recipes" />
+            <h3>OT Data Analysis</h3>
+            <p>Adynamic Business data analysis for OT using Oracle Apex</p>
+            <p>delivering key insights into sales performance, product trends,inventory effeciency and employee productivity.</p>
+            <p>Interactive reports and visualizations uncover patterns across years, empowering smarter, data-driven decisions. </p>
+
+            <a
+              href="https://drive.google.com/file/d/1s8xikt609by3Bwf72eOBYeTEFw5AEz-6/view?usp=sharing"
               class="btn small"
               >View Demo</a
             >
@@ -106,15 +135,7 @@
               >View Presentation</a
             >
           </div>
-
-          <div class="project">
-            <img src="images/iliso.png" alt="ILISO" />
-            <h3>ILISO Tracking System</h3>
-            <p>Real-time attendance tracking using NFC cards.</p>
-            <a href="https://atracker.lcstudio-incubate.co.za/" class="btn small"
-              >View Demo</a
-            >
-          </div>
+          
         </div>
       </div>
     </section>
@@ -123,18 +144,19 @@
     <section id="skills" class="section">
       <div class="container">
         <h2>Skills</h2>
+        <br>
         <div class="skills-grid">
           <div>
             <h3>Technical</h3>
-            <p>HTML • CSS • JavaScript • Node • MySQL • Vue</p>
+            <p>HTML • CSS • JavaScript • React • Flutter • Wordpress • Android Studio • Node • MySQL • Vue • Firebase • Python • PHP </p>
           </div>
           <div>
             <h3>Design</h3>
-            <p>Illustrator • Photoshop • InDesign</p>
+            <p>Figma • Canva • Illustrator • Photoshop • InDesign</p>
           </div>
           <div>
             <h3>Certified</h3>
-            <p>Cloud • Cybersecurity • DevOps • Data Analysis • Software Dev</p>
+            <p>Cloud • Cybersecurity • DevOps • Data Analysis • Software Dev </p>
           </div>
         </div>
       </div>
@@ -146,13 +168,13 @@
         <div>
           <h2>Let’s Work Together</h2>
           <p>
-            Have a project or opportunity in mind? Send me a message below — I’ll
+            Have a project or opportunity in mind? Send me a message below & I’ll
             reply within 24 hours.
           </p>
           <p>
             📧
-            <a href="mailto:ntlabathisn1@gmail.com"
-              >ntlabathisn1@gmail.com</a
+            <a href="mailto:ntlabathibukho@gmail.com"
+              >ntlabathibukho@gmail.com</a
             ><br />
             📞 067 160 0389
           </p>
@@ -184,7 +206,10 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">↑</button>
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
 
     <!-- Scripts -->
     <script>

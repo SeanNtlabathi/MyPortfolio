@@ -1,12 +1,10 @@
 // ===== Smooth Scroll Animation =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", e => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const target = document.querySelector(anchor.getAttribute("href"));
     if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
+      target.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
@@ -17,8 +15,9 @@ const navMenu = document.querySelector(".nav-menu");
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    navToggle.classList.toggle("open");
+    const isActive = navMenu.classList.toggle("active");
+    navToggle.classList.toggle("open", isActive);
+    document.body.classList.toggle("no-scroll", isActive); // Prevent background scroll
   });
 }
 
@@ -26,28 +25,19 @@ if (navToggle && navMenu) {
 const backToTop = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 250) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
+  backToTop?.classList.toggle("show", window.scrollY > 250);
 });
 
-if (backToTop) {
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-}
+backToTop?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 // ===== Hero Fade-in Animation =====
 window.addEventListener("load", () => {
   const heroContent = document.querySelector(".hero-content");
   if (heroContent) {
     heroContent.style.opacity = 0;
-    heroContent.style.transform = "translateY(30px)";
+    heroContent.style.transform = "translateY(40px)";
     setTimeout(() => {
       heroContent.style.transition = "all 0.9s ease";
       heroContent.style.opacity = 1;
@@ -62,6 +52,22 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
     if (navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
       navToggle.classList.remove("open");
+      document.body.classList.remove("no-scroll");
     }
   });
+});
+
+// ===== Hide Navbar on Scroll Down (Optional smooth UX) =====
+let lastScrollTop = 0;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (!navbar) return;
+  const currentScroll = window.scrollY;
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    navbar.classList.add("nav-hidden"); // hide on scroll down
+  } else {
+    navbar.classList.remove("nav-hidden"); // show on scroll up
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });

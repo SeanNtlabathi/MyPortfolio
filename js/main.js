@@ -1,74 +1,53 @@
-// ===== Smooth Scroll Animation =====
+// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", e => {
     e.preventDefault();
     const target = document.querySelector(anchor.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// ===== Mobile Navbar Toggle =====
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
+// ===== Hamburger Toggle =====
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener("click", () => {
-    const isActive = navMenu.classList.toggle("active");
-    navToggle.classList.toggle("open", isActive);
-    document.body.classList.toggle("no-scroll", isActive); // Prevent background scroll
-  });
-}
-
-// ===== Scroll-to-Top Button =====
-const backToTop = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  backToTop?.classList.toggle("show", window.scrollY > 250);
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active"); // Hamburger animation
+  navLinks.classList.toggle("active");   // Show/hide mobile menu
+  document.body.classList.toggle("no-scroll"); // Optional: prevent scrolling
 });
 
-backToTop?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// ===== Hero Fade-in Animation =====
-window.addEventListener("load", () => {
-  const heroContent = document.querySelector(".hero-content");
-  if (heroContent) {
-    heroContent.style.opacity = 0;
-    heroContent.style.transform = "translateY(40px)";
-    setTimeout(() => {
-      heroContent.style.transition = "all 0.9s ease";
-      heroContent.style.opacity = 1;
-      heroContent.style.transform = "translateY(0)";
-    }, 400);
-  }
-});
-
-// ===== Close Mobile Menu on Link Click =====
-document.querySelectorAll(".nav-menu a").forEach(link => {
+// Close menu when a link is clicked (mobile)
+navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
-    if (navMenu.classList.contains("active")) {
-      navMenu.classList.remove("active");
-      navToggle.classList.remove("open");
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
       document.body.classList.remove("no-scroll");
     }
   });
 });
 
-// ===== Hide Navbar on Scroll Down (Optional smooth UX) =====
-let lastScrollTop = 0;
-const navbar = document.querySelector("nav");
+// ===== Blobs Cursor Follow =====
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
 
-window.addEventListener("scroll", () => {
-  if (!navbar) return;
-  const currentScroll = window.scrollY;
-  if (currentScroll > lastScrollTop && currentScroll > 100) {
-    navbar.classList.add("nav-hidden"); // hide on scroll down
-  } else {
-    navbar.classList.remove("nav-hidden"); // show on scroll up
-  }
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  document.querySelector(".blob1").style.transform =
+    `translate(${x * 40}px, ${y * 40}px)`;
+
+  document.querySelector(".blob2").style.transform =
+    `translate(${x * -30}px, ${y * -30}px)`;
+
+  document.querySelector(".blob3").style.transform =
+    `translate(${x * 25}px, ${y * 25}px)`;
 });
 
+// ===== Blobs Scroll Parallax =====
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  document.querySelector(".blob1").style.top = `${scrollY * 0.08 - 150}px`;
+  document.querySelector(".blob2").style.bottom = `${scrollY * 0.05 - 200}px`;
+  document.querySelector(".blob3").style.top = `${scrollY * 0.06 + 200}px`;
+});

@@ -19,8 +19,16 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-      <nav class="navbar">
+
+    <!-- Floating Blobs -->
+<div class="blob-bg">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
+   <!-- Navbar -->
+<nav class="navbar">
   <h1>SN.</h1>
 
   <!-- Hamburger icon -->
@@ -41,13 +49,14 @@
   </ul>
 </nav>
 
-    </header>
+
+    <!-- </header> -->
 
    <!-- Home -->
 <section id="home" class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
-    <h2>Hi! I'm Sean, a <span>Front-End Developer</span></h2>
+    <h2>Hi! I'm Sean, a <span id="typed-role"></span></h2>
     <p>"First, solve the problem. Then, write the code." – John Johnson</p>
     <a
       href="https://drive.google.com/file/d/1-3402KECbgqrTGs4TAWXmuF5k00NlTB7/view?usp=sharing"
@@ -255,6 +264,12 @@
         </form>
       </div>
 
+      <div class="footer-socials">
+  <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+</div>
+
       <p class="copyright">© 2025 Sean Ntlabathi. All rights reserved.</p>
     </footer>
 
@@ -266,6 +281,37 @@
 
     <!-- Scripts -->
     <script>
+      // Typed Role Animation
+const roles = ["Front-End Developer", "UI/UX Designer", "Graphic Designer"];
+let roleIndex = 0;
+let charIndex = 0;
+const typedRole = document.getElementById("typed-role");
+const typingSpeed = 120;
+const erasingSpeed = 50;
+const delayBetweenRoles = 2000;
+
+function typeRole() {
+  if (charIndex < roles[roleIndex].length) {
+    typedRole.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeRole, typingSpeed);
+  } else {
+    setTimeout(eraseRole, delayBetweenRoles);
+  }
+}
+
+function eraseRole() {
+  if (charIndex > 0) {
+    typedRole.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseRole, erasingSpeed);
+  } else {
+    roleIndex = (roleIndex + 1) % roles.length;
+    setTimeout(typeRole, typingSpeed);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeRole);
       // Section reveal animation
       const sections = document.querySelectorAll("section");
       const revealOnScroll = () => {

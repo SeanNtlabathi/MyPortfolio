@@ -72,20 +72,23 @@
         <h2>About Me</h2>
         <br>
         <div class="about-flex">
-          <img src="images/sean1.jpeg" alt="Sean Ntlabathi" />
+          <img src="images/sean3.jpeg" alt="Sean Ntlabathi" />
           <p>
-  I’m <strong>Bukho Sean Ntlabathi</strong> — a Front-End Developer, UI/UX and Graphic Designer based in Cape Town.
-  I design and build modern, user-focused digital experiences that combine clean
-  aesthetics with functional performance.
+      I’m <strong>Bukho Sean Ntlabathi</strong> — a Front-End Developer, UI/UX and Graphic Designer based in Cape Town.
+      I design and build modern, user-focused digital experiences that combine clean
+      aesthetics with functional performance.
+      <br><br>
+      My expertise includes UI/UX design, responsive front-end development and
+      backend integration using technologies like Node.js and MySQL. I enjoy
+      turning complex problems into simple, intuitive interfaces that feel
+      effortless to use.
+    </p>
 
-  <br><br>
+    <br>
 
-  My expertise includes UI/UX design, responsive front-end development and
-  backend integration using technologies like Node.js and MySQL. I enjoy
-  turning complex problems into simple, intuitive interfaces that feel
-  effortless to use.
-</p>
-
+    <button class="btn primary about-story-btn" onclick="openStoryModal()">
+      Read My Journey
+    </button>
           <!-- <br>
           <a
           href="https://drive.google.com/file/d/1cC5A2kcSx7VshK2HwLdu5Rb1kUJqXM8u/view?usp=sharing"
@@ -122,7 +125,7 @@
           Management, History of Art
         </p> -->
         <p class="edu-details">
-          Graphic Design
+          Graphic Design, Visual Communication & Illustration
         </p>
       </div>
 
@@ -186,7 +189,7 @@
         </p>
 
         <div class="project-buttons">
-          <button class="btn small primary" onclick="openCaseStudy('path')">
+          <button class="btn small primary" onclick="openCaseStudy('pricepulse')">
       View Case Study
     </button>
           <a href="https://www.figma.com/design/OzYT9krNP5ujGySa7ihvBL/Untitled?node-id=0-1&t=u29ReZuDiXZxEVNN-1"
@@ -217,7 +220,7 @@
         </p>
 
         <div class="project-buttons">
-          <button class="btn small primary" onclick="openCaseStudy('path')">
+          <button class="btn small primary" onclick="openCaseStudy('iliso')">
       View Case Study
     </button>
           <a href="https://www.figma.com/proto/j3VF8GX4doVtjURTx4nvUF/Employee_Tracking?node-id=1495-305&p=f&t=42MEIUFhLsI5Lw2D-1&scaling=scale-down&content-scaling=fixed&page-id=706%3A2&starting-point-node-id=1500%3A391&show-proto-sidebar=1"
@@ -266,7 +269,7 @@
         </p>
 
         <div class="project-buttons">
-          <button class="btn small primary" onclick="openCaseStudy('path')">
+          <button class="btn small primary" onclick="openCaseStudy('otdataanalysis')">
       View Case Study
     </button>
           <a href="https://drive.google.com/file/d/1s8xikt609by3Bwf72eOBYeTEFw5AEz-6/view?usp=sharing"
@@ -287,7 +290,7 @@
         </p>
 
         <div class="project-buttons">
-          <button class="btn small primary" onclick="openCaseStudy('path')">
+          <button class="btn small primary" onclick="openCaseStudy('readyrecipes')">
       View Case Study
     </button>
           <a href="https://docs.google.com/presentation/d/1CUgH_gHvTqFXQm7dJYcxdj2Se4C_wrF0/edit?usp=sharing&ouid=113608061090433176136&rtpof=true&sd=true"
@@ -589,6 +592,168 @@ animate();
 
       <h4>Impact</h4>
       <p>[Add measurable or usability impact]</p>
+    `,
+
+    pricepulse: `
+  <h2>Price Pulse – Grocery Price Comparison App</h2>
+
+  <h4>Overview</h4>
+  <p>
+    Price Pulse is a Flutter-based Android application that allows users to compare real-time grocery prices
+    across South Africa’s four major retailers: Pick n Pay, Woolworths, Checkers, and Game/Makro.
+    The goal was to help consumers make smarter purchasing decisions using live scraped pricing data.
+  </p>
+
+  <h4>The Problem</h4>
+  <p>
+    Grocery shoppers often check multiple retailer websites manually to find the best prices.
+    This process is time-consuming and inefficient.
+  </p>
+  <p>
+    There was no single mobile platform that:
+  </p>
+  <ul>
+    <li>Compared prices in one centralized view</li>
+    <li>Displayed real-time updated data</li>
+    <li>Redirected users directly to the lowest-priced retailer</li>
+  </ul>
+
+  <h4>The Solution</h4>
+  <p>
+    We developed a working MVP mobile application that integrates Python-based web scraping
+    with a clean Flutter user interface.
+  </p>
+  <ul>
+    <li>Uses Python web scraping to fetch real-time product prices</li>
+    <li>Displays results clearly inside a structured Flutter UI</li>
+    <li>Includes a legal disclaimer for transparency and compliance</li>
+    <li>Allows users to click “Buy Now” to navigate directly to the selected retailer</li>
+  </ul>
+  <p>
+    The result was a focused, functional price comparison tool designed for clarity and efficiency.
+  </p>
+
+  <h4>My Role</h4>
+  <p>
+    I was part of the Flutter development team and contributed primarily to branding and UI implementation.
+  </p>
+  <ul>
+    <li>Designed the app logo in collaboration with the UI/UX team</li>
+    <li>Built and implemented the splash screen</li>
+    <li>Configured <strong>flutter_native_splash</strong> for proper cross-device rendering</li>
+    <li>Ensured visual consistency and professional polish across launch experience</li>
+  </ul>
+  <p>
+    This was my first experience working with Flutter and Android Studio, requiring rapid adaptation and technical growth.
+  </p>
+
+  <h4>Technical Stack</h4>
+  <ul>
+    <li>Flutter (Mobile Development)</li>
+    <li>Python (Web Scraping)</li>
+    <li>Android Studio</li>
+    <li>flutter_native_splash</li>
+    <li>Figma (UI Design)</li>
+  </ul>
+
+  <h4>Challenges & Learning</h4>
+  <p>
+    This project required rapid upskilling in a new mobile development framework.
+    Key areas of growth included:
+  </p>
+  <ul>
+    <li>Understanding Flutter fundamentals and widget structure</li>
+    <li>Managing project architecture and asset configuration</li>
+    <li>Running and debugging applications using Android emulator</li>
+    <li>Collaborating across design and development roles</li>
+  </ul>
+  <p>
+    A key usability challenge was improving user flow.
+    We addressed this by introducing a “Buy Now” button that redirected users directly
+    to the lowest-priced retailer, significantly reducing friction.
+  </p>
+
+  <h4>Impact</h4>
+  <ul>
+    <li>Delivered a functional MVP within project timeline</li>
+    <li>Established strong visual identity from initial launch screen</li>
+    <li>Improved user decision-making through centralized price comparison</li>
+    <li>Demonstrated ability to quickly adapt to new frameworks under pressure</li>
+  </ul>
+
+  <h4>Key Takeaways</h4>
+  <ul>
+    <li>Clear communication accelerates product delivery</li>
+    <li>Brand consistency improves perceived product quality</li>
+    <li>UI polish enhances trust and usability</li>
+    <li>Rapid learning is a competitive advantage in tech environments</li>
+  </ul>
+`,
+
+    iliso: `
+      <h2>Path – Transport App Case Study</h2>
+      <h4>Project Overview</h4>
+      <p>[You will add overview here later]</p>
+
+      <h4>Problem</h4>
+      <p>[Add problem statement]</p>
+
+      <h4>Solution</h4>
+      <p>[Add solution explanation]</p>
+
+      <h4>Key Features</h4>
+      <ul>
+        <li>Live route tracking</li>
+        <li>NFC integration</li>
+        <li>In-app ticket purchasing</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>[Add measurable or usability impact]</p>
+    `,
+
+    otdataanalysis: `
+      <h2>Path – Transport App Case Study</h2>
+      <h4>Project Overview</h4>
+      <p>[You will add overview here later]</p>
+
+      <h4>Problem</h4>
+      <p>[Add problem statement]</p>
+
+      <h4>Solution</h4>
+      <p>[Add solution explanation]</p>
+
+      <h4>Key Features</h4>
+      <ul>
+        <li>Live route tracking</li>
+        <li>NFC integration</li>
+        <li>In-app ticket purchasing</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>[Add measurable or usability impact]</p>
+    `,
+
+    readyrecipes: `
+      <h2>Path – Transport App Case Study</h2>
+      <h4>Project Overview</h4>
+      <p>[You will add overview here later]</p>
+
+      <h4>Problem</h4>
+      <p>[Add problem statement]</p>
+
+      <h4>Solution</h4>
+      <p>[Add solution explanation]</p>
+
+      <h4>Key Features</h4>
+      <ul>
+        <li>Live route tracking</li>
+        <li>NFC integration</li>
+        <li>In-app ticket purchasing</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>[Add measurable or usability impact]</p>
     `
   };
 
@@ -607,6 +772,65 @@ animate();
       modal.style.display = "none";
     }
   };
+</script>
+<!-- Story Modal -->
+<div id="storyModal" class="modal">
+  <div class="modal-content story-content">
+    <span class="close" onclick="closeStoryModal()">&times;</span>
+
+    <h2>My Journey</h2>
+
+    <h4>Where It Started</h4>
+    <p>
+      I began as a creative in the visual arts discipline, where I developed a deep understanding
+      of composition, visual hierarchy, branding systems and storytelling. Design was my foundation —
+      long before I wrote my first line of code.
+    </p>
+
+    <h4>Transition Into Tech</h4>
+    <p>
+      After completing my Art & Design qualification, I transitioned into the tech industry through
+      the <strong>Life Choices Academy Software Development Learnership</strong>.
+      There, I built a strong foundation in full-stack development, data analytics and UI/UX design
+      through real-world projects, hackathons and Agile team sprints.
+    </p>
+
+    <h4>Bridging Design & Development</h4>
+    <p>
+      I discovered the power of combining visual thinking with technical execution.
+      Whether building a digital attendance system integrated with Google Sheets,
+      developing Oracle APEX dashboards, or converting static mockups into responsive web interfaces,
+      I focus on creating structured, user-centric systems that solve real operational problems.
+    </p>
+
+    <h4>What Drives Me Today</h4>
+    <p>
+      Today, I position myself as a UI-focused Frontend Developer — someone who understands
+      branding, interface clarity and system logic. I’m committed to continuous growth as a
+      programmer and innovative problem-solver, and I aim to contribute to meaningful digital
+      products within dynamic teams.
+    </p>
+
+    <p>
+      I’m excited about the future of technology — and ready to help shape it.
+    </p>
+  </div>
+</div>
+<script>
+  function openStoryModal() {
+    document.getElementById("storyModal").style.display = "flex";
+  }
+
+  function closeStoryModal() {
+    document.getElementById("storyModal").style.display = "none";
+  }
+
+  window.addEventListener("click", function(event) {
+    const modal = document.getElementById("storyModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 </script>
   </body>
 </html>

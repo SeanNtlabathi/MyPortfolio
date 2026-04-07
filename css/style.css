@@ -313,6 +313,7 @@ section.visible {
   margin: 0 auto;
 }
 
+
 /* ===== Education Section ===== */
 #education h2 {
   margin-bottom: 30px;
@@ -415,6 +416,27 @@ section.visible {
 }
 
 .project .btn.small.secondary:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn.primary {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #222;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn.secondary:hover {
   background: #000;
   color: #fff;
 }
@@ -618,4 +640,51 @@ footer a:hover {
   background: #fff;
   color: #000;
   transform: translateY(-4px);
+}
+
+/* ===== Modal Styling ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 16px;
+  overflow-y: auto;
+  max-height: 85vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.modal-content p,
+.modal-content li {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
 }

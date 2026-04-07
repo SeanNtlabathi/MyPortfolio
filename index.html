@@ -74,10 +74,18 @@
         <div class="about-flex">
           <img src="images/sean1.jpeg" alt="Sean Ntlabathi" />
           <p>
-            I’m Sean Ntlabathi — a passionate Front-End Developer and Graphic
-            Designer based in Cape Town. I specialize in UI/UX, front-end
-            development as well as backend technologies like Node.js and MySQL.
-          </p>
+  I’m <strong>Bukho Sean Ntlabathi</strong> — a Front-End Developer, UI/UX and Graphic Designer based in Cape Town.
+  I design and build modern, user-focused digital experiences that combine clean
+  aesthetics with functional performance.
+
+  <br><br>
+
+  My expertise includes UI/UX design, responsive front-end development and
+  backend integration using technologies like Node.js and MySQL. I enjoy
+  turning complex problems into simple, intuitive interfaces that feel
+  effortless to use.
+</p>
+
           <!-- <br>
           <a
           href="https://drive.google.com/file/d/1cC5A2kcSx7VshK2HwLdu5Rb1kUJqXM8u/view?usp=sharing"
@@ -109,18 +117,21 @@
       <div class="edu-item">
         <h3 class="edu-title">College of Cape Town</h3>
         <span class="edu-year">2022 – 2024</span>
-        <p class="edu-details">
+        <!-- <p class="edu-details">
           Graphic Design, Drawing, Graphic Processes, Entrepreneurship & Business
           Management, History of Art
+        </p> -->
+        <p class="edu-details">
+          Graphic Design
         </p>
       </div>
 
       <div class="edu-item">
         <h3 class="edu-title">Sea Point High School</h3>
         <span class="edu-year">2021</span>
-        <p class="edu-details">
+        <!-- <p class="edu-details">
           Matric — Visual Art, Design, Business Studies, Mathematics
-        </p>
+        </p> -->
       </div>
 
     </div>
@@ -145,10 +156,13 @@
         </p>
 
         <div class="project-buttons">
+          <button class="btn small primary" onclick="openCaseStudy('path')">
+      View Case Study
+    </button>
           <a href="https://www.figma.com/design/P8D3fd8vDZnQx8ZhKMaXGX/Golden-Arrow-Mobile-App-Design"
              target="_blank"
-             class="btn small">
-             View Mockup
+             class="btn small secondary">
+             View UI/UX Screens
           </a>
         </div>
       </div>
@@ -158,8 +172,8 @@
         <h3>FleetPro – Fleet Management Dashboard</h3>
         <p>A modern fleet monitoring system designed to help companies track vehicles, drivers, trips, and maintenance in real time.</p>
         <a href="https://www.figma.com/design/P8D3fd8vDZnQx8ZhKMaXGX/Golden-Arrow-Mobile-App-Design?node-id=321-374&t=5iP9Ue0ZP2HHLe2g-1" 
-        class="btn small">
-          View Figma</a>
+        class="btn small secondary">
+          View UI/UX Screens </a>
       </div>
 
       <!-- Price Pulse -->
@@ -172,19 +186,22 @@
         </p>
 
         <div class="project-buttons">
+          <button class="btn small primary" onclick="openCaseStudy('path')">
+      View Case Study
+    </button>
           <a href="https://www.figma.com/design/OzYT9krNP5ujGySa7ihvBL/Untitled?node-id=0-1&t=u29ReZuDiXZxEVNN-1"
            target="_blank"
-           class="btn small">
-           View Mockup
+           class="btn small secondary">
+           View UI/UX Screens
          </a>
           <a href="https://drive.google.com/file/d/..."
              target="_blank"
-             class="btn small">
-             View Demo
+             class="btn small secondary">
+             View Live Site
           </a>
           <a href="https://github.com/keanan557/Price-Pulse"
            target="_blank"
-           class="btn small">
+           class="btn small secondary">
            View Github
          </a>
         </div>
@@ -200,26 +217,29 @@
         </p>
 
         <div class="project-buttons">
+          <button class="btn small primary" onclick="openCaseStudy('path')">
+      View Case Study
+    </button>
           <a href="https://www.figma.com/proto/j3VF8GX4doVtjURTx4nvUF/Employee_Tracking?node-id=1495-305&p=f&t=42MEIUFhLsI5Lw2D-1&scaling=scale-down&content-scaling=fixed&page-id=706%3A2&starting-point-node-id=1500%3A391&show-proto-sidebar=1"
            target="_blank"
-           class="btn small">
-           View Prototype
+           class="btn small secondary">
+           View UI/UX Screens
          </a>
           <a href="https://atracker.lcstudio-incubate.co.za/"
              target="_blank"
-             class="btn small">
+             class="btn small secondary">
              View Live System
           </a>
           <a href="https://github.com/mikaeel203/xneelo-iliso/tree/main"
            target="_blank"
-           class="btn small">
+           class="btn small secondary">
            View Github
          </a>
         </div>
       </div>
 
       <!-- WordPress Portfolio -->
-      <div class="project">
+      <!-- <div class="project">
         <img src="images/wordpressportfolio.png" alt="WordPress Portfolio Website" />
         <h3>Personal Portfolio – WordPress</h3>
         <p>
@@ -234,7 +254,7 @@
              View Website
           </a>
         </div>
-      </div>
+      </div> -->
 
       <!-- OT Data Analysis -->
       <div class="project">
@@ -246,10 +266,13 @@
         </p>
 
         <div class="project-buttons">
+          <button class="btn small primary" onclick="openCaseStudy('path')">
+      View Case Study
+    </button>
           <a href="https://drive.google.com/file/d/..."
              target="_blank"
-             class="btn small">
-             View Demo
+             class="btn small secondary">
+             View live Site
           </a>
         </div>
       </div>
@@ -264,10 +287,13 @@
         </p>
 
         <div class="project-buttons">
+          <button class="btn small primary" onclick="openCaseStudy('path')">
+      View Case Study
+    </button>
           <a href="https://docs.google.com/presentation/d/..."
              target="_blank"
-             class="btn small">
-             View Case Study
+             class="btn small secondary">
+             View Presentation
           </a>
         </div>
       </div>
@@ -276,6 +302,16 @@
   </div>
 </section>
 
+<!-- Case Study Modal -->
+<div id="caseStudyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCaseStudy()">&times;</span>
+
+    <div id="caseStudyBody">
+      <!-- Content Injected Dynamically -->
+    </div>
+  </div>
+</div>
 
     <!-- Skills -->
 <section id="skills" class="skills-section">
@@ -294,7 +330,7 @@
     <div class="skill-card">
       <i class="icon ri-terminal-window-line"></i>
       <h3>Full-Stack & Tools</h3>
-      <p>PHP • Node.js • SQL • Oracle APEX • Git & GitHub • Google Sheets • Data Analysis </p>
+      <p>Node.js • Oracle APEX • GitHub • Google Sheets • Data Analysis </p>
     </div>
 
     <!-- Design Skills -->
@@ -326,8 +362,8 @@
           </p>
           <p>
             📧
-            <a href="mailto:ntlabathibukho@gmail.com"
-              >ntlabathibukho@gmail.com</a
+            <a href="mailto:ntlabathibukho@icloud.com"
+              >ntlabathibukho@icloud.com</a
             ><br />
             📞 067 160 0389
           </p>
@@ -531,5 +567,46 @@ function animate() {
 animate();
 
     </script>
+    <script>
+  const caseStudies = {
+    path: `
+      <h2>Path – Transport App Case Study</h2>
+      <h4>Project Overview</h4>
+      <p>[You will add overview here later]</p>
+
+      <h4>Problem</h4>
+      <p>[Add problem statement]</p>
+
+      <h4>Solution</h4>
+      <p>[Add solution explanation]</p>
+
+      <h4>Key Features</h4>
+      <ul>
+        <li>Live route tracking</li>
+        <li>NFC integration</li>
+        <li>In-app ticket purchasing</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>[Add measurable or usability impact]</p>
+    `
+  };
+
+  function openCaseStudy(project) {
+    document.getElementById("caseStudyBody").innerHTML = caseStudies[project];
+    document.getElementById("caseStudyModal").style.display = "flex";
+  }
+
+  function closeCaseStudy() {
+    document.getElementById("caseStudyModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("caseStudyModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
   </body>
 </html>
